@@ -9,9 +9,9 @@ const isDev = process.env.NODE_ENV !== 'production';
 const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false;
 const resolve = require('path').resolve;
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const secrets = require('./secrets.js');
-const api = require('./api');
+//const mongoose = require('mongoose');
+//const secrets = require('./secrets.js');
+//const api = require('./api');
 const app = express();
 
 // mongoose.connect(secrets.database);
