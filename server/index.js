@@ -14,12 +14,12 @@ const secrets = require('./secrets.js');
 const api = require('./api');
 const app = express();
 
-mongoose.connect(secrets.database);
+// mongoose.connect(secrets.database);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/api', api);
+// app.use('/api', api);
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
