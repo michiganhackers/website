@@ -28,8 +28,11 @@ export default class App extends React.PureComponent { // eslint-disable-line re
           titleTemplate="%s - Michigan Hackers"
           defaultTitle="Michigan Hackers"
           meta={[
-          { name: 'description', content: 'Michigan Hackers official website' },
-        ]}
+            { name: 'description', content: 'Michigan Hackers official website' },
+          ]}
+          link={[
+            { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' }
+          ]}
         />
         <Header />
         {React.Children.toArray(this.props.children)}
