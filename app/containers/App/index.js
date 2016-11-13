@@ -12,6 +12,7 @@
  */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 import Header from 'components/Header';
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -23,6 +24,13 @@ export default class App extends React.PureComponent { // eslint-disable-line re
   render() {
     return (
       <div>
+        <Helmet
+          titleTemplate="%s - Michigan Hackers"
+          defaultTitle="Michigan Hackers"
+          meta={[
+          { name: 'description', content: 'Michigan Hackers official website' },
+        ]}
+        />
         <Header />
         {React.Children.toArray(this.props.children)}
       </div>
