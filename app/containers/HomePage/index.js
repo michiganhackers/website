@@ -10,11 +10,9 @@
  */
 
 import React from 'react';
-import MeetingImage from './meeting.jpg';
-import { FormattedMessage } from 'react-intl';
-import Helmet from "react-helmet";
-import styled from 'styled-components';
-import messages from './messages';
+
+import Hero from './Hero';
+import MainContent from './MainContent';
 
 import img_fb from './img/sq_fbr.png';
 import img_mail from './img/sq_mailr.png';
@@ -78,31 +76,6 @@ if(lessThan500.matches){
     test = "Yes"
 }
 
-const Hero = styled.div`
-  width: 100%;
-  background: url(${MeetingImage}) no-repeat;
-  background-size: cover;
-`;
-
-const Container = styled.div`
-  max-width: calc(768px + 16px * 2);
-  margin: 0 auto;
-  padding: 0 16px;
-`;
-
-const HeroContainer = styled.div`
-  padding: 200px 0;
-  color: white;
-  font-size: 48px;
-  font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
-`;
-
-const CenteredSection = styled.div`
-  text-align: center;
-`;
-
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   submitEmail() {
@@ -126,19 +99,8 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   render() {
     return (
       <div>
-        <Hero>
-          <Container>
-            <HeroContainer>
-              <FormattedMessage {...messages.header} />
-            </HeroContainer>
-          </Container>
-        </Hero>
-        <Container>
-          <CenteredSection>
-            <h2>Learn. Create. Repeat.</h2>
-            <p>Michigan Hackers exists to foster a community of individuals who enjoy expressing creativity through technology.</p>
-          </CenteredSection>
-        </Container>
+        <Hero />
+        <MainContent />
 
         <div style = {former}>
 
