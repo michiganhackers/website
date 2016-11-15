@@ -39,7 +39,7 @@ export default styled(Header)`
   .navbar-default {
     background-color: transparent;
     color: white;
-  } 
+  }
   .navbar-default .container {
     padding: 10px;
   }

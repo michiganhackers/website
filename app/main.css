@@ -1,0 +1,34 @@
+.blank {
+    background: #ffffff;
+    height: 30px;
+}
+
+.orange {
+    background: #ef5b2e;
+    font-family: Helvetica;
+    color: white;
+}
+
+@media screen and (max-width: 790px) {
+    .navlink {
+        font-size: 18px;
+        padding: 0;
+        max-height: 61px;
+    }
+    .halfwidth {
+        width: 93.34%;
+        margin-right: 3.33%;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    #navwrapper {
+        width: 100%;
+    }
+    .laptop-img {
+        margin-top: 36px;
+    }
+    #calendarwrapper {
+        margin-top: 76px;
+    }
+}
