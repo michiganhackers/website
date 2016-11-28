@@ -13,12 +13,13 @@ import React from 'react';
 
 import Hero from './Hero';
 import MainContent from './MainContent';
+import Events from './events';
+import Footer from './footer'
 import MeetingImage from './meeting.jpg';
 import { FormattedMessage } from 'react-intl';
 import Helmet from "react-helmet";
 import styled from 'styled-components';
 import messages from './messages';
-import Footer from './footer'
 import Media from 'react-media'
 
 import img_fb from './img/sq_fbr.png';
@@ -35,6 +36,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
       <div>
         <Hero />
         <MainContent />
+        <Events />
         <Footer />
       </div>
     );
