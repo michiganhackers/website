@@ -11,7 +11,7 @@ const resolve = require('path').resolve;
 const bodyParser = require('body-parser');
 //const mongoose = require('mongoose');
 //const secrets = require('./secrets.js');
-//const api = require('./api');
+const api = require('./api/routes');
 const app = express();
 
 // mongoose.connect(secrets.database);
@@ -19,7 +19,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.use('/api', api);
+app.use('/api/v1', api);
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {

@@ -14,7 +14,7 @@ const HeroWrapper = styled.div`
 const HeroContainer = styled.div`
   padding: 200px 0;
   color: white;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
