@@ -9,12 +9,23 @@ const isDev = process.env.NODE_ENV !== 'production';
 const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false;
 const resolve = require('path').resolve;
 const bodyParser = require('body-parser');
-//const mongoose = require('mongoose');
-//const secrets = require('./secrets.js');
 const api = require('./api/routes');
 const app = express();
 
-// mongoose.connect(secrets.database);
+const Pool = require('pg').Pool;
+
+var config = {
+  host: 'localhost',
+  user: 'test',
+  password: 'test',
+  database: 'mh_db'
+}
+
+process.on('unhandledRejection', function (e) {
+  console.log(e.message, e.stack);
+});
+
+const pool = new Pool(config);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -48,4 +59,8 @@ app.listen(port, (err) => {
   } else {
     logger.appStarted(port);
   }
+  
+  pool.query('SELECT * FROM Users', function(err, result) {
+    console.log("test", err, result);
+  })
 });

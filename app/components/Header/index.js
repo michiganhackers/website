@@ -3,6 +3,33 @@ import {Navbar, Nav, NavItem} from 'react-bootstrap';
 import styled from 'styled-components';
 import LogoImage from './logo_h.png';
 
+const HeaderWrapper = styled.div`
+  z-index: 1;
+  position: relative;
+`;
+
+const Skew = styled.div`
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: visible;
+    width: 100%;
+    height: 250px;
+    background: #ef5b2e;
+    z-index: -1;
+    transform: skewY(-2deg);
+    backface-visibility: initial;
+  }
+`;
+
+const Content = styled.div`
+  padding: 20px;
+  margin-left: 0;
+  margin-right: 0;
+`;
+
 class Header extends React.Component {
   render() {
     return (
