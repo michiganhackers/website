@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 const api = require('./api/routes');
 const app = express();
 
-const Pool = require('pg').Pool;
+//const Pool = require('pg').Pool;
 
 var config = {
   host: 'localhost',
@@ -25,7 +25,7 @@ process.on('unhandledRejection', function (e) {
   console.log(e.message, e.stack);
 });
 
-const pool = new Pool(config);
+//const pool = new Pool(config);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -60,7 +60,7 @@ app.listen(port, (err) => {
     logger.appStarted(port);
   }
   
-  pool.query('SELECT * FROM Users', function(err, result) {
-    console.log("test", err, result);
-  })
+  //pool.query('SELECT * FROM Users', function(err, result) {
+  //  console.log("test", err, result);
+  //})
 });
