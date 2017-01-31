@@ -2,23 +2,45 @@ import React from 'react';
 
 import Container from './Container';
 import CenteredSection from './CenteredSection';
+import styled from 'styled-components';
+
+const SponsorImage = styled.div`
+    width: 300px;
+    height: 100px;
+    margin: 5px;
+    backgroundColor: black;
+`;
+
+const SponsorRow = styled.div`
+    display: flex;
+    justifyContent: center;
+`;
+
 
 class MainContent extends React.Component {
   render() {
     return (
       <Container>
         <CenteredSection>
-          <div className="col-md-4">
-            <h2>Hack Night</h2>
-            <p>Every Thursday in TechArb, everyone is invited to come work on anything and everything.</p>
-          </div>
-          <div className="col-md-4">
-            <h2>Learn to Hack</h2>
-            <p>Dedicated to teaching others a variety of intro topics such as web and mobile development</p>
-          </div>
-          <div className="col-md-4">
-            <h2>Mentorship</h2>
-            <p>lol</p>
+          <div className="sponsors-section">
+            <h2>Sponsors</h2>
+            <p>Blurb about the sponsors but idk what to put because I am a p.o.s!</p>
+
+            <SponsorRow>
+                <SponsorImage><p>Google</p></SponsorImage>
+                <SponsorImage><p>Facebook</p></SponsorImage>
+            </SponsorRow>
+
+            <SponsorRow>
+                <SponsorImage><p>Microsoft</p></SponsorImage>
+                <SponsorImage><p>Capital One</p></SponsorImage>
+                <SponsorImage><p>ARM</p></SponsorImage>
+            </SponsorRow>
+
+            <SponsorRow>
+                <SponsorImage><p>Qualtrics</p></SponsorImage>
+                <SponsorImage><p>Yelp</p></SponsorImage>
+            </SponsorRow>
           </div>
         </CenteredSection>
       </Container>
