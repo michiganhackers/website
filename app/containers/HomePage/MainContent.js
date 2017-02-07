@@ -21,14 +21,15 @@ const SubInput = styled.input`
 
 class MainContent extends React.Component {
 
-  constructor(){
-    super()
-    this.state = { emailText: '' }
-    this.emailChange = this.emailChange.bind(this)
+  constructor() {
+    super();
+
+    this.state = { emailText: '' };
+    this.emailChange = this.emailChange.bind(this);
   }
 
-  emailChange(e){
-    this.setState({ emailText: e.target.value })
+  emailChange(e) {
+    this.setState({ emailText: e.target.value });
   }
 
   render() {
@@ -38,17 +39,15 @@ class MainContent extends React.Component {
 
 
           <div className="subscribe-section">
-            <SubLink/>
+            <SubLink />
             <h2>Join Michigan Hackers</h2>
-            <p>If you're interested in more specifics about what we do, or in joining us at events:.</p>
+            <p>If youre interested in more specifics about what we do, or in joining us at events</p>
             <p>Click here to learn more.</p>
             <p>Recieve our email detailing upcoming upcoming events, tech talks, hack-athons, and news once every few weeks:</p>
-            <form>  
-                <SubInput type="text" value={this.state.emailText} onChange={(e)=>{this.emailChange(e)}} />
+            <form>
+              <SubInput type="text" value={this.state.emailText} onChange={(e) => { this.emailChange(e); }} />
             </form>
           </div>
-        
-
 
         </CenteredSection>
       </Container>
