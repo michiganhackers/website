@@ -48,7 +48,6 @@ class MainContent extends React.Component {
     return (
       <Container>
         <CenteredSection>
-
           <div className="subscribe-section">
             <SubLink />
             <h2>Join Michigan Hackers</h2>
