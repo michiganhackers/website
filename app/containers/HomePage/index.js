@@ -7,19 +7,17 @@
 
 import React from 'react';
 
-import Container from 'components/Container';
-
 import SponsorSection from './SponsorSection';
 import SubscribeSection from './SubscribeSection';
 
 const HomePage = () =>
    (
-     <Container>
+     <div>
 
-       <SponsorSection />
        <SubscribeSection />
+       <SponsorSection />
 
-     </Container>
+     </div>
   )
 ;
 
