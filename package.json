@@ -197,6 +197,7 @@
     "lodash": "4.16.4",
     "minimist": "1.2.0",
     "mongoose": "^4.6.6",
+    "normalize.css": "^5.0.0",
     "pg": "^6.1.2",
     "react": "15.3.2",
     "react-bootstrap": "^0.30.6",
