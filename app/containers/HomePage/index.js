@@ -12,16 +12,15 @@ import Container from 'components/Container';
 import SponsorSection from './SponsorSection';
 import SubscribeSection from './SubscribeSection';
 
-const HomePage = () => {
-  
-  return (
-    <Container>
+const HomePage = () =>
+   (
+     <Container>
 
-      <SponsorSection />
-      <SubscribeSection />
+       <SponsorSection />
+       <SubscribeSection />
 
-    </Container>
-  );
-};
+     </Container>
+  )
+;
 
 export default HomePage;
