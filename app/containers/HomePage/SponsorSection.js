@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import Container from 'components/Container';
+
 import MicrosoftLogo from 'static/assets/sponsors/microsoft-logo.svg';
 import CapitalOneLogo from 'static/assets/sponsors/capital-one-logo.svg';
 import ArmLogo from 'static/assets/sponsors/ARM_logo.svg';
@@ -30,7 +33,7 @@ const SponsorRow = styled.div`
 class SponsorSection extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <Container>
         <h2>Sponsors</h2>
         <p>Blurb about the sponsors but idk what to put because I am a p.o.s!</p>
 
@@ -64,7 +67,7 @@ class SponsorSection extends React.Component { // eslint-disable-line react/pref
           </ImageWrapper>
         </SponsorRow>
 
-      </div>
+      </Container>
 
     );
   }
