@@ -1,16 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SectionHeadera = styled.h2`
-  background-color: white;
-  color: orange;
+const HeaderWrapper = styled.div`
   text-align: center;
 `;
 
-const SectionHeader = () => {
+const Header = styled.h2`
+  display: inline-block;
+  background-color: white;
+  color: orange;
+  padding: 5px 15px;
+`;
+
+const SectionHeader = (props) => {
   return (
     <div>
-      <h2>hello</h2>
+      <HeaderWrapper>
+        <Header>{props.text}</Header>
+      </HeaderWrapper>
     </div>
   );
 };
