@@ -5,18 +5,33 @@ const HeaderWrapper = styled.div`
   text-align: center;
 `;
 
-const Header = styled.h2`
+const BaseHeader = styled.h2`
   display: inline-block;
-  background-color: white;
   color: orange;
   padding: 5px 15px;
 `;
+
+const LightHeader = styled(BaseHeader)`
+  background-color: white;
+`;
+
+const DarkHeader = styled(BaseHeader)`
+  background-color: purple;
+`;
+
+const Header = ({text = '', darkBackground = false}) => {
+    if (darkBackground) {
+        return <DarkHeader>{text}</DarkHeader>;
+    } else {
+        return <LightHeader>{text}</LightHeader>;
+    }
+};
 
 const SectionHeader = (props) => {
   return (
     <div>
       <HeaderWrapper>
-        <Header>{props.text}</Header>
+        <Header {...props} />
       </HeaderWrapper>
     </div>
   );
