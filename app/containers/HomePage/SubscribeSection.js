@@ -34,12 +34,15 @@ const EmailInput = styled.input`
 
 const SubscribeSectionWrapper = styled.div`
   background-color: #f27e52;
-  padding: 50px 0;
+  padding: 70px 0;
 `;
 
 const ContentText = styled.p`
   color: white;
   text-align: center;
+  width: 600px;
+  max-width: 80%;
+  margin: 20px auto;
 `;
 
 class SubscribeSection extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -51,13 +54,13 @@ class SubscribeSection extends React.Component { // eslint-disable-line react/pr
     };
   }
 
-  handleEmailInput = (e) => {
+  handleEmailInput(e) {
     this.setState({
       email: e.target.value,
     });
   }
 
-  submitEmail = (e) => {
+  submitEmail(e) {
     e.preventDefault();
 
     console.log('Thanks bruh:', this.state.email);
@@ -69,8 +72,8 @@ class SubscribeSection extends React.Component { // eslint-disable-line react/pr
         <Container>
           <SectionHeader text="Subscribe" />
           <ContentText>Being a michigan hacker means you want something more out of your Michigan experience. Lorem
-            ipsum dolor sit amet please lorem dolor sit amet I cant even see the tacos from my residence in the highest
-            apartment in the city of which I have never seen nor know th elocation of</ContentText>
+            I cant even see the tacos from my residence in the highest
+            apartment in the city of which I have never seen nor know the location</ContentText>
           <Form onSubmit={this.submitEmail}>
             <EmailInput type="text" value={this.state.email} placeholder="hacker@umich.edu" onChange={this.handleEmailInput} />
             <SubmitButton type="submit" />

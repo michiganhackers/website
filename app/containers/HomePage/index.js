@@ -9,11 +9,13 @@ import React from 'react';
 
 import SponsorSection from './SponsorSection';
 import SubscribeSection from './SubscribeSection';
+import CalendarSection from './CalendarSection';
 
 const HomePage = () =>
    (
      <div>
 
+       <CalendarSection />
        <SubscribeSection />
        <SponsorSection />
 
