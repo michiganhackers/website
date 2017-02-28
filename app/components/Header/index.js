@@ -3,6 +3,14 @@ import styled from 'styled-components';
 
 import Container from 'components/Container';
 
+import LogoImg from './logo_h.png';
+
+const HeaderButton = styled.button`
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+`;
+
 const HeaderWrapper = styled.div`
   background-color: #ef6539;
 `;
@@ -18,11 +26,11 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderContainer>
-        <p>Michigan Hackers</p>
+        <img src={LogoImg} width="200px" />
         <div>
-          <button>Events</button>
-          <button>Events</button>
-          <button>Events</button>
+          <HeaderButton>Calendar</HeaderButton>
+          <HeaderButton>About</HeaderButton>
+          <HeaderButton>Sponsors</HeaderButton>
         </div>
       </HeaderContainer>
     </HeaderWrapper>

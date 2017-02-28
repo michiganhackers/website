@@ -12,9 +12,18 @@ import QualtricsLogo from 'static/assets/sponsors/qualtrics-logo.jpg';
 import GoogleLogo from 'static/assets/sponsors/google-logo.svg';
 import YelpLogo from 'static/assets/sponsors/yelp-logo.svg';
 
-const SponsorImage = styled.img`
-  height: 100%;
+const SectionWrapper = styled.div`
+  padding: 70px 0;
+`;
+
+
+const SponsorImageWrapper = styled.div`
   width: 33%;
+  padding: 2%;
+`;
+
+const SponsorImage = styled.img`
+  width: 100%;
   padding: 15px;
   max-width: 100%;
 `;
@@ -30,28 +39,27 @@ const SponsorRow = styled.div`
 class SponsorSection extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <Container>
-        <SectionHeader text="Sponsors" darkBackground={true} />
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Blurb about the sponsors but idk what to put because I am a p.o.s! It's all centered until it's not</p> 
+      <SectionWrapper>
+        <Container>
+          <SectionHeader text="Sponsors" darkBackground={true} />
+          <SponsorRow>
+            <SponsorImageWrapper><SponsorImage src={MicrosoftLogo}></SponsorImage></SponsorImageWrapper>
+            <SponsorImageWrapper><SponsorImage src={CapitalOneLogo}></SponsorImage></SponsorImageWrapper>
+          </SponsorRow>
 
-        <SponsorRow>
-          <SponsorImage src={MicrosoftLogo}></SponsorImage>
-          <SponsorImage src={CapitalOneLogo}></SponsorImage>
-        </SponsorRow>
+          <SponsorRow>
+            <SponsorImageWrapper><SponsorImage src={ArmLogo}></SponsorImage></SponsorImageWrapper>
+            <SponsorImageWrapper><SponsorImage src={FacebookLogo}></SponsorImage></SponsorImageWrapper>
+            <SponsorImageWrapper><SponsorImage src={QualtricsLogo}></SponsorImage></SponsorImageWrapper>
+          </SponsorRow>
 
-        <SponsorRow>
-          <SponsorImage src={ArmLogo}></SponsorImage>
-          <SponsorImage src={FacebookLogo}></SponsorImage>
-          <SponsorImage src={QualtricsLogo}></SponsorImage>
-        </SponsorRow>
+          <SponsorRow>
+            <SponsorImageWrapper><SponsorImage src={GoogleLogo}></SponsorImage></SponsorImageWrapper>
+            <SponsorImageWrapper><SponsorImage src={YelpLogo}></SponsorImage></SponsorImageWrapper>
+          </SponsorRow>
 
-        <SponsorRow>
-          <SponsorImage src={GoogleLogo}></SponsorImage>
-          <SponsorImage src={YelpLogo}></SponsorImage>
-        </SponsorRow>
-
-      </Container>
-
+        </Container>
+      </SectionWrapper>
     );
   }
 }

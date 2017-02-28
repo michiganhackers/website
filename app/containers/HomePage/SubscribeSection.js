@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Container from 'components/Container';
 import SectionHeader from './SectionHeader';
+import ContentText from './ContentText';
 
 const Form = styled.form`
   width: 60%;
@@ -37,12 +38,8 @@ const SubscribeSectionWrapper = styled.div`
   padding: 70px 0;
 `;
 
-const ContentText = styled.p`
+const SubscribeContentText = styled(ContentText)`
   color: white;
-  text-align: center;
-  width: 600px;
-  max-width: 80%;
-  margin: 20px auto;
 `;
 
 class SubscribeSection extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -71,9 +68,8 @@ class SubscribeSection extends React.Component { // eslint-disable-line react/pr
       <SubscribeSectionWrapper>
         <Container>
           <SectionHeader text="Subscribe" />
-          <ContentText>Being a michigan hacker means you want something more out of your Michigan experience. Lorem
-            I cant even see the tacos from my residence in the highest
-            apartment in the city of which I have never seen nor know the location</ContentText>
+          <SubscribeContentText>Being a michigan hacker means you want something more out of your Michigan experience. Lorem I cant even see the tacos from my residence in the highest
+            apartment in the city of which I have never seen nor know the location</SubscribeContentText>
           <Form onSubmit={this.submitEmail}>
             <EmailInput type="text" value={this.state.email} placeholder="hacker@umich.edu" onChange={this.handleEmailInput} />
             <SubmitButton type="submit" />

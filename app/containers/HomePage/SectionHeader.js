@@ -7,7 +7,7 @@ const HeaderWrapper = styled.div`
 
 const BaseHeader = styled.h2`
   display: inline-block;
-  font-size: 22px;
+  font-size: 26px;
   padding: 5px 15px;
   margin: 0;
   text-transform: uppercase;
