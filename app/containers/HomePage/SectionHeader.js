@@ -7,10 +7,11 @@ const HeaderWrapper = styled.div`
 
 const BaseHeader = styled.h2`
   display: inline-block;
-  font-size: 26px;
+  font-size: 28px;
   padding: 5px 15px;
   margin: 0;
   text-transform: uppercase;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
 `;
 
 const LightHeader = styled(BaseHeader)`
