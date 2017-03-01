@@ -9,6 +9,7 @@ const HeaderButton = styled.button`
   color: white;
   font-size: 16px;
   text-transform: uppercase;
+  font-weight: bold;
 `;
 
 const HeaderWrapper = styled.div`

@@ -7,14 +7,18 @@
 
 import React from 'react';
 
-import SponsorSection from './SponsorSection';
-import SubscribeSection from './SubscribeSection';
+import HeroSection from './HeroSection';
+import InfoSection from './InfoSection';
 import CalendarSection from './CalendarSection';
+import SubscribeSection from './SubscribeSection';
+import SponsorSection from './SponsorSection';
 
 const HomePage = () =>
    (
      <div>
 
+       <HeroSection />
+       <InfoSection />
        <CalendarSection />
        <SubscribeSection />
        <SponsorSection />
