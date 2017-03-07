@@ -6,6 +6,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SectionHeader from 'components/SectionHeader';
+
 const SocialLinkContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -17,13 +19,6 @@ const SocialLink = styled.div`
     margin: 15px;
     border-radius: 50%;
     background-color: white;
-`;
-
-const FooterImage = styled.div`
-  width: 240px;
-  height: 40px;
-  margin: 10px auto;
-  background-color: white;
 `;
 
 const FooterWrapper = styled.div`
@@ -40,7 +35,6 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
             <SocialLink />
             <SocialLink />
           </SocialLinkContainer>
-          <FooterImage />
         </FooterWrapper>
     );
   }

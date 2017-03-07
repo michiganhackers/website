@@ -6,22 +6,23 @@ import Container from 'components/Container';
 import BlockLogoImg from 'static/assets/homepage/block-logo.svg';
 
 const HeroWrapper = styled.div`
-  background-color: salmon;
+  background-color: #f15d25;
 `;
 
 const HeroContainer = styled(Container)`
-  padding: 20px 0;
+  padding: 120px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
 const BlockLogoContainer = styled.div`
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
 `;
 
 const BlockLogo = styled.img`
+  width: 70%;
   display: block;
   margin: 0 auto;
 `;

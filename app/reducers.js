@@ -16,6 +16,40 @@ import languageProviderReducer from 'containers/LanguageProvider/reducer';
  *
  */
 
+const defaultArrayState = {
+  fetching: false,
+  fetched: false,
+  error: null,
+  data: []
+};
+
+function eventsReducer(state = defaultArrayState, action) {
+  switch (action.type) {
+    case 'EVENTS_REQUEST':
+      return {
+        ...state,
+        fetching: true,
+        fetched: false
+      };
+    case 'EVENTS_FAILURE':
+      return {
+        ...state,
+        error: action.error,
+        fetching: false,
+        fetched: false
+      };
+    case 'EVENTS_SUCCESS':
+      return {
+        ...state,
+        fetching: false,
+        fetched: true,
+        data: action.data
+      };
+    default:
+      return state;
+  };
+};
+
 // Initial routing state
 const routeInitialState = fromJS({
   locationBeforeTransitions: null,
@@ -41,6 +75,7 @@ function routeReducer(state = routeInitialState, action) {
  */
 export default function createReducer(asyncReducers) {
   return combineReducers({
+    events: eventsReducer,
     route: routeReducer,
     language: languageProviderReducer,
     ...asyncReducers,

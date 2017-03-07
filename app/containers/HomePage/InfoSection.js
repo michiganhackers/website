@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from 'components/Container';
-import SectionHeader from './SectionHeader';
+import SectionHeader from 'components/SectionHeader';
 
 const ColumnWrapper = styled.div`
   display: flex;

@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from 'components/Container';
-import SectionHeader from './SectionHeader';
+import SectionHeader from 'components/SectionHeader';
 import ContentText from './ContentText';
 import CalendarItem from './CalendarItem';
+
+import {connect} from 'react-redux';
 
 const SectionWrapper = styled.div`
   background-color: #ed5336;
@@ -39,9 +41,15 @@ class CalendarSection extends React.Component {
   }
 }
 
+function select(state) {
+  return {
+    events: state.events.data
+  };
+}
+
 CalendarSection.propTypes = {
   loading: React.PropTypes.bool,
   events: React.PropTypes.array
 };
 
-export default CalendarSection;
+export default connect(select)(CalendarSection);

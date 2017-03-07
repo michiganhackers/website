@@ -13,7 +13,7 @@ const HeaderButton = styled.button`
 `;
 
 const HeaderWrapper = styled.div`
-  background-color: #ef6539;
+  background-color: #f15d25;
 `;
 
 const HeaderContainer = styled(Container)`

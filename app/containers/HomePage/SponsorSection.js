@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from 'components/Container';
-import SectionHeader from './SectionHeader';
+import SectionHeader from 'components/SectionHeader';
 
 import MicrosoftLogo from 'static/assets/sponsors/microsoft-logo.svg';
 import CapitalOneLogo from 'static/assets/sponsors/capital-one-logo.svg';
