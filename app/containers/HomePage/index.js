@@ -11,6 +11,7 @@ import HeroSection from './HeroSection';
 import InfoSection from './InfoSection';
 import CalendarSection from './CalendarSection';
 import SubscribeSection from './SubscribeSection';
+import KnowledgeBaseSection from './KnowledgeBaseSection';
 import SponsorSection from './SponsorSection';
 
 const HomePage = () =>
@@ -20,6 +21,7 @@ const HomePage = () =>
        <HeroSection />
        <InfoSection />
        <CalendarSection />
+       <KnowledgeBaseSection />
        <SubscribeSection />
        <SponsorSection />
 
