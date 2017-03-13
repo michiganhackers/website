@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from 'components/Container';
-import SectionHeader from './SectionHeader';
+import SectionHeader from 'components/SectionHeader';
 import ContentText from './ContentText';
 
 const KnowledgeBaseButton = styled.a`
